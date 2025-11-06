@@ -14,6 +14,54 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo1 {
+            bindings = <&kp LBKT>;
+            key-positions = <3 4>;
+        };
+
+        combo2 {
+            bindings = <&kp RBKT>;
+            key-positions = <7 8>;
+        };
+
+        combo3 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 16>;
+        };
+
+        combo4 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 20>;
+        };
+
+        combo5 {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <27 28>;
+        };
+
+        combo6 {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <31 32>;
+        };
+
+        combo7 {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <5 6>;
+        };
+
+        combo8 {
+            bindings = <&kp PIPE>;
+            key-positions = <17 18>;
+        };
+
+        combo9 {
+            bindings = <&kp ENTER>;
+            key-positions = <21 22>;
+        };
+    };
     behaviors {
         hr: hr {
             compatible = "zmk,behavior-hold-tap";
@@ -40,20 +88,20 @@
         };
 
         lower_layer {
-            bindings = <
-&none  &kp NUMBER_1  &kp NUMBER_2           &kp NUMBER_3         &kp NUMBER_4           &kp N5         &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0  &none
-&none  &kp EQUAL     &hr NUMBER_6 LEFT_ALT  &hr N5 LEFT_CONTROL  &hr NUMBER_4 LEFT_GUI  &kp KP_DIVIDE  &none         &hr DOLLAR RIGHT_GUI  &hr PERCENT RCTRL     &hr CARET RIGHT_ALT    &none         &none
-&none  &kp MINUS     &kp N9                 &kp N8               &kp N7                 &kp N0         &none         &kp AMPERSAND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none         &none
-                                            &lt ADJ TAB          &trans                 &trans         &trans        &trans                &lt ADJ DEL
+             bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &trans
+&trans  &none         &none         &none         &kp LC(F5)    &kp F12         &kp MINUS     &kp EQUAL     &kp GRAVE     &kp RC(L)     &kp SQT        &trans
+&trans  &none         &none         &none         &none         &none           &none         &none         &none         &trans        &kp RC(SLASH)  &trans
+                                    &trans        &trans        &trans          &mo 3         &kp RSHIFT    &trans
             >;
         };
 
         raise_layer {
-            bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none        &none        &none     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &none            &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none        &none        &kp LEFT  &kp DOWN              &kp UP           &kp RIGHT_ARROW  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none        &none        &none     &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP     &none            &none
-                        &trans   &trans   &lt ADJ RET  &lt ADJ ESC  &trans    &trans
+           bindings = <
+&trans  &kp ESC   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &kp CAPS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT         &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &kp DEL   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp AT_SIGN        &trans  &trans    &trans    &trans     &trans  &trans
+                                   &trans           &trans           &trans             &trans  &trans    &trans
             >;
         };
 
