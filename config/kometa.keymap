@@ -70,7 +70,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
         };
@@ -109,7 +109,7 @@
 
         raise_layer {
             bindings = <
-&trans  &kp ESC   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &kp ESC   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
 &trans  &kp CAPS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &kp DEL   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp AT_SIGN      &trans  &trans    &trans    &trans     &trans  &trans
                                    &trans           &trans           &trans           &trans  &trans    &trans
